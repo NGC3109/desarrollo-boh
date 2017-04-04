@@ -1,0 +1,22 @@
+[14-Sep-2016 22:50:27 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.admin_Getaway' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php:10
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php(10): PDO->prepare('SELECT * FROM a...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php on line 10
+[14-Sep-2016 22:50:29 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.admin_Getaway' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php:10
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php(10): PDO->prepare('SELECT * FROM a...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php on line 10
+[14-Sep-2016 22:50:30 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.admin_Getaway' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php:10
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php(10): PDO->prepare('SELECT * FROM a...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php on line 10
+[14-Sep-2016 22:50:31 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.admin_Getaway' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php:10
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php(10): PDO->prepare('SELECT * FROM a...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actions/validate_user.php on line 10
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: idc in /home3/repuest4/public_html/getawaybox/administracion/actions/editar-actividad.php on line 43
+[15-Sep-2016 01:12:03 America/Denver] PHP Notice:  Undefined index: foto in /home3/repuest4/public_html/getawaybox/administracion/actions/editar-actividad.php on line 35

@@ -1,0 +1,69 @@
+[14-Sep-2016 22:43:21 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[14-Sep-2016 22:43:21 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[14-Sep-2016 22:55:04 America/Denver] PHP Notice:  Undefined variable: colaboradorE in /home3/repuest4/public_html/getawaybox/administracion/editar-colaborador.php on line 197
+[14-Sep-2016 22:55:04 America/Denver] PHP Notice:  Undefined index: estado in /home3/repuest4/public_html/getawaybox/administracion/editar-colaborador.php on line 267
+[14-Sep-2016 22:55:25 America/Denver] PHP Notice:  Undefined variable: colaboradorE in /home3/repuest4/public_html/getawaybox/administracion/editar-colaborador.php on line 197
+[14-Sep-2016 22:55:25 America/Denver] PHP Notice:  Undefined index: estado in /home3/repuest4/public_html/getawaybox/administracion/editar-colaborador.php on line 267
+[14-Sep-2016 23:01:40 America/Denver] PHP Notice:  A session had already been started - ignoring session_start() in /home3/repuest4/public_html/getawaybox/administracion/load/profile.php on line 2
+[14-Sep-2016 23:01:40 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.admin_cc' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/load/profile.php:7
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/load/profile.php(7): PDO->prepare('SELECT * FROM a...')
+#1 /home3/repuest4/public_html/getawaybox/administracion/pages-user-profile.php(6): require_once('/home3/repuest4...')
+#2 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/load/profile.php on line 7
+[14-Sep-2016 23:20:46 America/Denver] PHP Notice:  Undefined index: estado in /home3/repuest4/public_html/getawaybox/administracion/editar-colaborador.php on line 267
+[15-Sep-2016 00:27:43 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[15-Sep-2016 00:27:43 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[15-Sep-2016 00:41:58 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.colaborador' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actividades.php:362
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actividades.php(362): PDO->prepare('SELECT nombre F...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 362
+[15-Sep-2016 00:42:12 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.colaborador' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/actividades.php:362
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/actividades.php(362): PDO->prepare('SELECT nombre F...')
+#1 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 362
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: idProducto in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 242
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: costo in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 262
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: direccion in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 269
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: comuna in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 277
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: foto in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 299
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: estado in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 309
+[15-Sep-2016 01:08:06 America/Denver] PHP Notice:  Undefined index: descripcion in /home3/repuest4/public_html/getawaybox/administracion/editar-actividad.php on line 325
+[15-Sep-2016 06:14:59 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[15-Sep-2016 06:14:59 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[15-Sep-2016 07:51:41 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 3
+[15-Sep-2016 07:51:41 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 84
+[15-Sep-2016 07:51:41 America/Denver] PHP Notice:  Undefined variable: stmtcol in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 221
+[15-Sep-2016 07:51:41 America/Denver] PHP Fatal error:  Call to a member function fetch() on null in /home3/repuest4/public_html/getawaybox/administracion/actividades.php on line 221
+[15-Sep-2016 09:14:44 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[15-Sep-2016 09:14:44 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[15-Sep-2016 09:28:04 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.horarios' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/load/precios.php:8
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/load/precios.php(8): PDO->prepare('SELECT * FROM h...')
+#1 /home3/repuest4/public_html/getawaybox/administracion/horarios.php(6): include('/home3/repuest4...')
+#2 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/load/precios.php on line 8
+[15-Sep-2016 09:28:09 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.lugares' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/load/canchas-y-extras.php:8
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/load/canchas-y-extras.php(8): PDO->prepare('SELECT * FROM l...')
+#1 /home3/repuest4/public_html/getawaybox/administracion/lugares.php(6): include('/home3/repuest4...')
+#2 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/load/canchas-y-extras.php on line 8
+[15-Sep-2016 09:28:17 America/Denver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'repuest4_getaway.lugares' doesn't exist' in /home3/repuest4/public_html/getawaybox/administracion/load/nueva-reserva.php:8
+Stack trace:
+#0 /home3/repuest4/public_html/getawaybox/administracion/load/nueva-reserva.php(8): PDO->prepare('SELECT * FROM l...')
+#1 /home3/repuest4/public_html/getawaybox/administracion/historial-de-reservas.php(8): include('/home3/repuest4...')
+#2 {main}
+  thrown in /home3/repuest4/public_html/getawaybox/administracion/load/nueva-reserva.php on line 8
+[16-Sep-2016 08:49:41 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[16-Sep-2016 08:49:41 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[20-Sep-2016 06:51:20 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/colaboradores.php on line 3
+[20-Sep-2016 06:51:20 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/colaboradores.php on line 81
+[20-Sep-2016 06:51:20 America/Denver] PHP Notice:  Undefined variable: stmth in /home3/repuest4/public_html/getawaybox/administracion/colaboradores.php on line 248
+[20-Sep-2016 06:51:20 America/Denver] PHP Fatal error:  Call to a member function fetch() on null in /home3/repuest4/public_html/getawaybox/administracion/colaboradores.php on line 248
+[20-Sep-2016 08:53:22 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[20-Sep-2016 08:53:22 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81
+[20-Sep-2016 09:16:18 America/Denver] PHP Notice:  Undefined index: id in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 3
+[20-Sep-2016 09:16:18 America/Denver] PHP Notice:  Undefined index: user in /home3/repuest4/public_html/getawaybox/administracion/index.php on line 81

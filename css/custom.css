@@ -1,0 +1,137 @@
+/* Add here all your CSS customizations */
+
+.send{
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 62px;
+    height: 62px;
+    font-style: normal;
+    font-weight: 900;
+    background-color: #000000;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    letter-spacing: 0px;
+    text-transform: none;
+    border-width: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-add{
+    color: #ffffff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 900;
+    background-color: #000000;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    letter-spacing: 0px;
+    text-transform: none;
+    border-width: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 46px;
+    height: 46px;
+
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0 23px;
+    font-size: 13px;
+    text-align: left;
+    font-family: Raleway,sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: 0;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-shadow: none;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.h1-header{
+    
+    text-align: left;
+    color: #722b90;
+    font-size: 34px;
+    line-height: 38px;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+p{
+    color: #868686;
+    font-size: 14px;
+    line-height: 23px;
+    font-style: normal;
+}
+
+.add-carrito-producto{
+    font-size: 23px;
+    line-height: 30px;
+    letter-spacing: -1.6px;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #131313;
+    text-align: left;
+    padding: 0;
+}
+.add-carrito-producto-precio{
+    color: #0a0400 !important;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: Ubuntu, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+
+input.wpcf7-form-control.wpcf7-text, textarea.wpcf7-form-control.wpcf7-textarea{
+    display: block;
+    margin: 5px 0 0;
+    padding: 15px;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    resize: none;
+    font-size: 13px;
+    line-height: 17px;
+    background-color: #fff;
+    color: #818181;
+    font-family: Raleway;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    background-color: #f8f8f8;
+}
+
+.txtarea{
+
+    padding: 15px 13px;
+    border: 0;
+    outline: 0;
+    resize: none;
+    font-size: 13px;
+    line-height: 17px;
+    background-color: #fff;
+    color: #818181;
+    width: 98%;
+    font-family: Raleway,sans-serif;
+    font-weight: 400;background-color: #f8f8f8;height: 144px;
+    
+}
