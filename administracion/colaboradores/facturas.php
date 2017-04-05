@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1)
+if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1 OR $_SESSION['id']==2)
 {
 require_once('../connections/db-settings.php');
 require_once('../connections/getaway.php');
@@ -10,7 +10,7 @@ include('../load/codigos.php');
 }
 else
 {
-header("Location:signin.php");	
+header("Location:../signin.php");	
 }
 
 
@@ -135,7 +135,7 @@ header("Location:signin.php");
 					<!-- start: page -->
 					<div class="row">
                     <!-- ACCORDION -->
-						<div class="col-md-12 col-lg-12 col-xl-12 col-xs-12">
+					<div class="col-md-12 col-lg-12 col-xl-12 col-xs-12">
 								<section class="panel">
 								<header class="panel-heading">
 									<div class="panel-actions">

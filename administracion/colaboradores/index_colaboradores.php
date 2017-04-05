@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1)
+if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1 OR $_SESSION['id']==2)
 {
 require_once('../connections/db-settings.php');
 require_once('../connections/getaway.php');
@@ -10,7 +10,7 @@ include('../load/codigos.php');
 }
 else
 {
-header("Location:signin.php");	
+header("Location:../signin.php");	
 }
 
 
@@ -79,7 +79,7 @@ header("Location:signin.php");
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<div class="profile-info" data-lock-name="">
-								<span class="name"><? echo $_SESSION['user']; ?></span>
+								<span class="name"><?php echo $_SESSION['nombre__']; ?></span>
 								<? //if ($_SESSION['idTipoUsuario'] == 2) {?>
 								<span class="role"><? //echo $_SESSION['idTipoUsuario']; ?></span>
 								<? //} ?>
@@ -148,7 +148,7 @@ header("Location:signin.php");
 					<div class="row">
                     <!-- ACCORDION -->
 						<div class="col-md-12 col-lg-12 col-xl-12 col-xs-12">
-								<section class="panel">
+							<section class="panel">
 								<header class="panel-heading">
 									<div class="panel-actions">
 										<a href="#" class="fa fa-caret-down"></a>
@@ -158,27 +158,27 @@ header("Location:signin.php");
 								</header>
 								<div class="panel-body">
                                 
-	                                <form id="agregar-horario" action="actions/agregar-codigo.php" method="POST">
+	                                <!--<form id="agregar-codigo-validacion" action="../actions/agregar-codigo-validacion.php" method="POST">-->
+	                                <form method="post" id="formulario" enctype="multipart/form-data">
 		                                <div class="row">
 			                                <div class="col-md-3">
 			                                  <div class="form-group">
 			                                     <label class="control-label">Ingresar codigo</label>
-			                                     <input type="text" class="form-control" name="cantidad" id="cantidad">
+			                                     <input type="text" class="form-control" name="codigo" id="codigo">
 			                                  </div>
 			                                </div>
 			                                <div class="col-md-3">
 			                                  <div class="form-group">
 			                                     <label class="control-label">Foto</label>
-			                                     <input type="file" class="form-control">
+			                                     <input type="file" name="foto" id="foto" class="form-control">
+			                                     <input type="submit" name="add" id="add" class="btn btn-success pull-right" style="margin-top:27px;" value="Ingresar"> 
 			                                  </div>
 			                                </div>
-			                                 <div class="col-md-12">
-			                                  <div class="form-group">
-			                                     <input type="submit" name="add" class="btn btn-success pull-right" style="margin-top:27px;" value="Ingresar">  
-			                                  </div>
-			                                 </div>
+			                                <div class="col-sm-12" id="resultado" style="margin-top:27px;">
+			                                	
+			                                </div>
 		                                </div>
-	                                </form>
+	                               </form> 
 								</div>
 							</section>
                             
@@ -200,13 +200,13 @@ header("Location:signin.php");
 											</tr>
 										</thead>
 										<tbody>
-	                                    <? while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
+	                                    <?php while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
 											<tr>
 												<td><? echo $codigos['NomActiv']; ?></td>
 												<td><? echo $codigos['NomCa']; ?></td>
 												<td><i class="fa fa-eye" aria-hidden="true"></i></td>
 											</tr>
-	                                     <? } ?> 
+	                                     <?php } ?> 
 										</tbody>
 									</table>
 								</div>
@@ -247,5 +247,62 @@ header("Location:signin.php");
 		<script src="../assets/javascripts/tables/examples.datatables.default.js"></script>
 		<script src="../assets/javascripts/tables/examples.datatables.row.with.details.js"></script>
 		<script src="../assets/javascripts/tables/examples.datatables.tabletools.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+				$(document).ready(function(){
+					$("#add").click(function(){
+					    validate();
+					});
+				});
+
+				function validate(idCodigo,foto){
+
+					var formData = new FormData(document.getElementById("formulario"));
+
+					$.ajax({
+		                data:  formData,
+		                url:   '../actions/agregar-codigo-validacion.php',
+		                type:  'POST',
+		                beforeSend: function () {
+                        	$("#resultado").html("Procesando, espere por favor...");
+		                },
+		                success:  function (response) {
+                        	$("#resultado").html(response);
+		                }
+	        		});
+
+				}
+		</script>
+
+
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -287,15 +287,15 @@ header("Location:signin.php");
 										</tr>
 									</thead>
 									<tbody>
-                                    <? while($producto=$stmt0->fetch(PDO::FETCH_ASSOC)){ ?>
+                                    <?php while($producto=$stmt0->fetch(PDO::FETCH_ASSOC)){ ?>
 										<tr>
-											<td><? echo $producto['nombre']; ?></td>
-											<td><? echo $producto['descripcion']; ?></td>
-											<td><? echo $producto['precio']; ?></td>
-											<td><? echo $producto['stock']; ?></td>
+											<td><?php echo $producto['nombre']; ?></td>
+											<td><?php echo $producto['descripcion']; ?></td>
+											<td><?php echo $producto['precio']; ?></td>
+											<td><?php echo $producto['stock']; ?></td>
                                             <td><a href="editar-producto.php?id=<? echo $producto['id']; ?>"><i class="fa fa-pencil"></i></a></td>
 										</tr>
-                                     <? } ?>   
+                                     <?php } ?>   
 									</tbody>
 								</table>
                                 

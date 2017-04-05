@@ -1,5 +1,4 @@
 <?php 
-
 	$db = pdoConnect();
 
 	$queryco="SELECT 
@@ -32,47 +31,18 @@
 	}
 
 /* TEST */
-
-function actividadesLoad(){
-
-	$conexion = mysqli_connect("localhost", "root", "","getaway") or die(mysqli_error()) ;
-
 	$querydet="SELECT 
+	
+	Q.idProducto,
+	Q.id AS idDetalle,
+	count(DISTINCT Q.idActividad) AS idActividad, 
+	P.nombre AS NombProduc
 
-	D.id AS detalle_id,
-	D.idCategoria,
-	D.idActividades,
+	FROM paquetes AS Q
 
-	C.id AS categoria_id,
-	C.nombre AS NomCa,
+	INNER JOIN productos AS P ON (P.id = Q.idProducto)
 
-	A.id AS actividad_id,
-	A.nombre AS NomActiv
-
-	FROM detalle_act_cat AS D 
-
-	INNER JOIN actividades AS A ON (A.id = D.idActividades)
-	INNER JOIN categorias AS C ON (C.id = D.idCategoria)";
-
-	$resultado = mysqli_query($conexion, $querydet);
-
-	$i = 0;
-	while( $file = mysqli_fetch_array( $resultado ) ){
-		$arreglo[ "actividades" ][ $i ] = array( 
-				"NomActiv"    	=> $file[ "NomActiv" ],
-				"actividad_id"    	=> $file[ "actividad_id" ],
-				"NomCa"    	=> $file[ "NomCa" ],
-				"categoria_id"    	=> $file[ "categoria_id" ]
-			);
-
-		@$arreglo[ "cantidad" ][ $fila[ "actividad_id" ] ][ $fila[ "categoria_id" ] ] += 1;
-
-		$i++;
-	}
-	    mysqli_free_result( $resultado );
-	  mysqli_close( $conexion );
-	return @$arreglo;
-
-}
-
+	GROUP BY P.id";
+	$stmtdeta= $db->prepare($querydet);
+	if(!$stmtdeta->execute()){echo "error queryr";}
 ?>
