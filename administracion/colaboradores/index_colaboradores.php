@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1 OR $_SESSION['id']==2)
+if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1)
 {
 require_once('../connections/db-settings.php');
 require_once('../connections/getaway.php');
@@ -79,7 +79,7 @@ header("Location:../signin.php");
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<div class="profile-info" data-lock-name="">
-								<span class="name"><?php echo $_SESSION['nombre__']; ?></span>
+								<span class="name"><? echo $_SESSION['user']; ?></span>
 								<? //if ($_SESSION['idTipoUsuario'] == 2) {?>
 								<span class="role"><? //echo $_SESSION['idTipoUsuario']; ?></span>
 								<? //} ?>
@@ -200,13 +200,13 @@ header("Location:../signin.php");
 											</tr>
 										</thead>
 										<tbody>
-	                                    <?php while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
+	                                    <? while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
 											<tr>
 												<td><? echo $codigos['NomActiv']; ?></td>
 												<td><? echo $codigos['NomCa']; ?></td>
 												<td><i class="fa fa-eye" aria-hidden="true"></i></td>
 											</tr>
-	                                     <?php } ?> 
+	                                     <? } ?> 
 										</tbody>
 									</table>
 								</div>

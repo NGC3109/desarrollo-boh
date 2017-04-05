@@ -81,7 +81,7 @@ header("Location:signin.php");
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<div class="profile-info" data-lock-name="">
-								<span class="name"><?php echo $_SESSION['user']; ?></span>
+								<span class="name"><? echo $_SESSION['user']; ?></span>
 								<span class="role">Administrador</span>
 							</div>
 			                <i class="fa custom-caret"></i>
@@ -217,12 +217,12 @@ header("Location:signin.php");
 		                                     <label class="control-label">Colaborador</label>
 		                                     <select class="form-control" name="idColaborador">
 		                                     <option value="0">Seleccionar</option>
-		                                      <?php 
+		                                      <? 
 											     while($colaborador=$stmtcol->fetch(PDO::FETCH_ASSOC)){
 												?>	
-												<option value="<?php echo $colaborador['id']; ?>"><?php echo $colaborador['nombre']; ?></option> 
+												<option value="<? echo $colaborador['id']; ?>"><? echo $colaborador['nombre']; ?></option> 
 													 
-											<?php		 
+											<?		 
 												 }
 											   ?>
 		                                     </select> 
@@ -234,12 +234,12 @@ header("Location:signin.php");
 	                                     <label class="control-label">Producto</label>
 	                                     <select class="form-control" name="idProducto">
 	                                     <option value="0">Seleccionar</option>
-	                                      <?php 
+	                                      <? 
 										     while($producto=$stmtpr->fetch(PDO::FETCH_ASSOC)){
 											?>	
-											<option value="<?php echo $producto['id']; ?>"><?php echo $producto['nombre']; ?></option> 
+											<option value="<? echo $producto['id']; ?>"><? echo $producto['nombre']; ?></option> 
 												 
-										<?php		 
+										<?		 
 											 }
 										   ?>
 	                                     </select> 
@@ -264,12 +264,26 @@ header("Location:signin.php");
 	                                     <label class="control-label">Comuna</label>
 	                                     <select class="form-control" name="comuna">
 	                                     <option value="0">Seleccionar</option>
-	                                      <?php 
-	                                      		$out = "";
+	                                      <? 
 										     while($comuna=$stmth->fetch(PDO::FETCH_ASSOC)){
+										     	
+												$old = "x";
+												$new = $comuna["PROVINCIA_NOMBRE"];
+												$out = "";
+
+												if ($new != $old) {
+
+													$out .= "<optgroup label='".$comuna["PROVINCIA_NOMBRE"]."'>";
+
+												}
+												$old = $new;
+												
 												$out .= "<option value=".$comuna["COMUNA_ID"].">".$comuna["COMUNA_NOMBRE"]."</option>";
+												$out .= "</optgroup>";
+
+											echo $out;
+
 											 }
-											 echo $out;
 										   ?>
 	                                     </select>  
 	                                  </div>
@@ -363,24 +377,24 @@ header("Location:signin.php");
 										</tr>
 									</thead>
 									<tbody>
-                                    <?php while($actividad=$stmt0->fetch(PDO::FETCH_ASSOC)){ ?>
+                                    <? while($actividad=$stmt0->fetch(PDO::FETCH_ASSOC)){ ?>
 										<tr>
-											<td><?php $queryc="SELECT nombre FROM productos WHERE id=:id";
+											<td><? $queryc="SELECT nombre FROM productos WHERE id=:id";
                                             $stmtc= $db->prepare($queryc);
 											$stmtc->bindParam(':id', $actividad['idProducto']);
                                             if(!$stmtc->execute()){echo "error queryc";}
 											$comunac=$stmtc->fetch(PDO::FETCH_ASSOC);
 											echo $comunac['nombre']; ?></td>
-											<td><?php $queryc="SELECT nombre FROM colaboradores WHERE id=:id";
+											<td><? $queryc="SELECT nombre FROM colaboradores WHERE id=:id";
                                             $stmtc= $db->prepare($queryc);
 											$stmtc->bindParam(':id', $actividad['idColaborador']);
                                             if(!$stmtc->execute()){echo "error queryc";}
 											$comunac=$stmtc->fetch(PDO::FETCH_ASSOC);
 											echo $comunac['nombre']; ?></td>
-											<td><?php echo $actividad['nombre']; ?></td>
-											<td><?php echo $actividad['direccion']; ?></td>
+											<td><? echo $actividad['nombre']; ?></td>
+											<td><? echo $actividad['direccion']; ?></td>
 											<td>
-											<?php 
+											<? 
 											$queryc="SELECT COMUNA_NOMBRE FROM comuna WHERE COMUNA_ID=:id";
                                             $stmtc= $db->prepare($queryc);
 											$stmtc->bindParam(':id', $actividad['comuna']);
@@ -390,17 +404,17 @@ header("Location:signin.php");
 											$comunac=$stmtc->fetch(PDO::FETCH_ASSOC);
 											echo $comunac['COMUNA_NOMBRE']; ?>
 											</td>
-                                            <td><?php 
+                                            <td><? 
 											   echo $actividad['telefono']; ?></td>
-                                               <td><?php 
+                                               <td><? 
 											   echo $actividad['email']; ?></td>
-                                            <td>$ <?php 
+                                            <td>$ <? 
 											   echo number_format($actividad['costo'],0,',', '.'); ?></td>
                                                
-                                            <td><?php if($actividad['estado']==1){echo "Activo";}elseif($actividad['estado']==2){echo "Inactivo";} ?></td>
-                                            <td><a href="editar-actividad.php?id=<?php echo $actividad['id']; ?>"><i class="fa fa-pencil"></i></a></td>
+                                            <td><? if($actividad['estado']==1){echo "Activo";}elseif($actividad['estado']==2){echo "Inactivo";} ?></td>
+                                            <td><a href="editar-actividad.php?id=<? echo $actividad['id']; ?>"><i class="fa fa-pencil"></i></a></td>
 										</tr>
-                                     <?php } ?>   
+                                     <? } ?>   
 									</tbody>
 								</table>
 

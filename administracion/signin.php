@@ -47,11 +47,11 @@
 						<h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i> Iniciar Sesión</h2>
 					</div>
 					<div class="panel-body" style="background:rgba(255,255,255,0.9);">
-						<form action ="controller/login.php" method= "POST" >
+						<form id="validate_user" action="actions/validate_user.php" method="POST">
 							<div class="form-group mb-lg">
 								<label>Usuario</label>
 								<div class="input-group input-group-icon">
-									<input name="usuario" type="text" class="form-control input-lg" />
+									<input name="username" type="text" class="form-control input-lg" />
 									<span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-user"></i>
@@ -66,7 +66,7 @@
 									<a href="recover-password.php" class="pull-right">Recuperar Clave</a>
 								</div>
 								<div class="input-group input-group-icon">
-									<input name="pass" type="password" class="form-control input-lg" />
+									<input name="pwd" type="password" class="form-control input-lg" />
 									<span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-lock"></i>

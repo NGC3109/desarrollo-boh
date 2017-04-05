@@ -154,12 +154,6 @@ header("Location:signin.php");
 											<span>Colaboradores</span>
 										</a>
 									</li>
-									<li>
-										<a href="colaboradores/index_colaboradores.php">
-											<i class="fa fa-group" aria-hidden="true"></i>
-											<span>Intranet Colaboradores</span>
-										</a>
-									</li>
                                     <li>
 										<a href="clientes.php">
 											<i class="fa fa-male" aria-hidden="true"></i>

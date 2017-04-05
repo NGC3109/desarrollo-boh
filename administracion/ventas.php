@@ -200,10 +200,10 @@ header("Location:signin.php");
 				<form id="agregar-horario" action="actions/agregar-venta.php" method="POST">
 					<header class="page-header">
 						<h2>Nº de venta:  
-						<?php if($ventasN=$stmt1->fetch(PDO::FETCH_ASSOC)){ ?>
-								<span><?php echo $ventasN['idVenta'] + 1; ?></span>
+						<? if($ventasN=$stmt1->fetch(PDO::FETCH_ASSOC)){ ?>
+								<span><? echo $ventasN['idVenta'] + 1; ?></span>
 								<input type="hidden" name="idVentaNew" value="<? echo $idNew = $ventasN['idVenta'] + 1; ?>">
-							<?php }?> 
+							<? }?> 
                          </h2>
 					</header>
 

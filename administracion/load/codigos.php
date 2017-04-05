@@ -32,17 +32,23 @@
 
 /* TEST */
 	$querydet="SELECT 
-	
-	Q.idProducto,
-	Q.id AS idDetalle,
-	count(DISTINCT Q.idActividad) AS idActividad, 
-	P.nombre AS NombProduc
 
-	FROM paquetes AS Q
+	D.id,
+	D.idCategoria,
+	D.idActividades,
 
-	INNER JOIN productos AS P ON (P.id = Q.idProducto)
+	C.id,
+	C.nombre AS NomCa,
 
-	GROUP BY P.id";
+	A.id,
+	A.nombre AS NomActiv
+
+	FROM detalle_act_cat AS D 
+
+	INNER JOIN actividades AS A ON (A.id = D.idActividades)
+	INNER JOIN categorias AS C ON (C.id = D.idCategoria)";
 	$stmtdeta= $db->prepare($querydet);
 	if(!$stmtdeta->execute()){echo "error queryr";}
+
+	
 ?>

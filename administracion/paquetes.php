@@ -80,7 +80,7 @@ header("Location:signin.php");
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<div class="profile-info" data-lock-name="">
-								<span class="name"><?php echo $_SESSION['user']; ?></span>
+								<span class="name"><? echo $_SESSION['user']; ?></span>
 								<span class="role">Administrador</span>
 							</div>
 			                <i class="fa custom-caret"></i>
@@ -198,20 +198,27 @@ header("Location:signin.php");
 								</header>
 								<div class="panel-body">
                                 
-                        <form id="agregar-paquete" action="actions/agregar-paquete.php" method="POST">
+                                <form id="agregar-horario" action="actions/agregar-codigo.php" method="POST">
                                
                                 <div class="row">
+	                                <div class="col-md-3">
+	                                  <div class="form-group">
+	                                     <label class="control-label">Cantidad de codigos</label>
+	                                     <input type="text" class="form-control" name="cantidad" id="cantidad">
+	                                  </div>
+	                                </div>
+
 	                                 <div class="col-md-3">
 	                                  <div class="form-group">
 	                                     <label class="control-label">Producto</label>
 	                                     <select class="form-control" name="idProducto">
 	                                     <option value="0">Seleccionar</option>
-	                                      <?php 
+	                                      <? 
 										     while($producto=$stmtpr->fetch(PDO::FETCH_ASSOC)){
 											?>	
-											<option value="<?php echo $producto['id']; ?>"><?php echo $producto['nombre']; ?></option> 
+											<option value="<? echo $producto['id']; ?>"><? echo $producto['nombre']; ?></option> 
 												 
-											<?php		 
+											<?		 
 											
 											 }
 										   
@@ -220,14 +227,16 @@ header("Location:signin.php");
 	                                  </div>
 	                                 </div>
 	                                <div class="col-sm-12">
+	                                <br />
+	                                	<label class="control-label">Seleccion multiple de actividades</label>
 									    <select multiple="multiple" size="10" name="duallistbox_demo1[]">
-									      <?php 
+									      <? 
 										     while($actividades=$stmtact->fetch(PDO::FETCH_ASSOC)){
 											?>	
 
-							<option value="<?php echo $actividades['id']; ?>"><?php echo $actividades['nombre']; ?> | <?php echo $actividades['idProducto']; ?></option> 
+							<option value="<? echo $actividades['id']; ?>"><? echo $actividades['nombre']; ?> | <? echo $actividades['idProducto']; ?></option> 
 
-											<?php		 
+											<?		 
 											
 											 }
 										   
@@ -267,13 +276,13 @@ header("Location:signin.php");
 										</tr>
 									</thead>
 									<tbody>
-                                    <?php while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
+                                    <? while($codigos=$stmtdeta->fetch(PDO::FETCH_ASSOC)){ ?>
 										<tr>
-											<td><?php echo $codigos['NombProduc']; ?></td>
-											<td><?php echo $codigos['idActividad']; ?></td>
-                                            <td><a href="actions/editar-paquetes.php?id=<?php echo $codigos['idPaquete']; ?>"><i class="fa fa-pencil"></i></a></td>
+											<td><? echo $codigos['NomActiv']; ?></td>
+											<td><? echo $codigos['NomCa']; ?></td>
+                                            <td><a href="#.php?id=<? echo $codigos['id']; ?>"><i class="fa fa-pencil"></i></a></td>
 										</tr>
-                                     <?php } ?> 
+                                     <? } ?> 
 									</tbody>
 								</table>
 

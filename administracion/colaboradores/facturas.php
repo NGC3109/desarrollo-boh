@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1 OR $_SESSION['id']==2)
+if($_SESSION['id']!="" && $_SESSION['id']!=NULL && $_SESSION['id']==1)
 {
 require_once('../connections/db-settings.php');
 require_once('../connections/getaway.php');
